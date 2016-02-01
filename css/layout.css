@@ -256,6 +256,9 @@ img {
     .ba-width-small-4-5 {
         width: 80%;
     }
+    .ba-width-small-1-6 {
+        width: 16.666%;
+    }
 }
 
 
