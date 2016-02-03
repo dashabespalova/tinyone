@@ -707,11 +707,6 @@ img {
     width: 80%;
   }
 }
-*,
-*:after,
-*:before {
-  transition: all 0.3s ease-in;
-}
 body {
   font: 400 16px/1.25 "PT Sans", Arial, sans-serif;
   color: #010101;
@@ -838,6 +833,7 @@ select:focus {
   padding-top: 5px;
 }
 .ba-phone .ba-menu li a {
+  display: block;
   font-size: 22px;
   font-weight: 700;
   text-decoration: none;
@@ -845,7 +841,102 @@ select:focus {
   line-height: 43px;
 }
 .ba-phone .ba-menu li a:hover {
-  color: #21fc00;
+  color: #fff;
+}
+.ba-phone .ba-menu-toggle {
+  display: none;
+}
+@media (max-width: 767px) {
+  .ba-phone .ba-menu-toggle {
+    display: block;
+    float: right;
+    padding: 0 20px;
+  }
+  .ba-phone .ba-menu-toggle span {
+    width: 30px;
+    display: block;
+    height: 4px;
+    background: #010101;
+    position: relative;
+    margin: 30px 0;
+    transition: background 0.2s ease-in;
+  }
+  .ba-phone .ba-menu-toggle span:before,
+  .ba-phone .ba-menu-toggle span:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: #010101;
+    left: 0;
+    right: 0;
+    transition: -webkit-transform 0.2s ease-in;
+    transition: transform 0.2s ease-in;
+    transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+  }
+  .ba-phone .ba-menu-toggle span:before {
+    top: -10px;
+  }
+  .ba-phone .ba-menu-toggle span:after {
+    bottom: -10px;
+  }
+  .ba-phone .ba-logo {
+    display: block;
+    width: 100px;
+  }
+  .ba-phone .ba-menu {
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    background: #010101;
+    padding-top: 60px;
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
+    transition: -webkit-transform 0.3s ease-in;
+    transition: transform 0.3s ease-in;
+    transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  }
+  .ba-phone .ba-menu li {
+    text-align: left;
+  }
+  .ba-phone .ba-menu li a {
+    color: #fcdb00;
+  }
+  .ba-phone body {
+    transition: -webkit-transform 0.3s ease-in;
+    transition: transform 0.3s ease-in;
+    transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  }
+  .ba-phone .ba-menu-opened {
+    -webkit-transform: translateX(-200px);
+        -ms-transform: translateX(-200px);
+            transform: translateX(-200px);
+    overflow: hidden;
+  }
+  .ba-phone .ba-menu-opened .ba-menu-toggle span {
+    background-color: transparent;
+  }
+  .ba-phone .ba-menu-opened .ba-menu-toggle span:before {
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .ba-phone .ba-menu-opened .ba-menu-toggle span:after {
+    -webkit-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
 }
 .ba-phone h2 {
   margin-top: 65px;
@@ -867,7 +958,7 @@ select:focus {
   margin-right: 37px;
 }
 .ba-phone__icon:hover {
-  color: #21fc00;
+  color: #fff;
 }
 .ba-phone__img {
   position: relative;
@@ -937,7 +1028,7 @@ select:focus {
   color: inherit;
 }
 .ba-features__one a:hover {
-  color: #21fc00;
+  color: #fcdb00;
 }
 .ba-features__icon {
   content: "";

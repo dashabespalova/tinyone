@@ -20,19 +20,22 @@
 	</head>
 	<body>
 		<div class="ba-phone">
-			<header class="ba-header cf">
 				<div class="ba-container">
-					<a href="#"><img src="img/logo.png" alt="logo"></a>
+						<header class="ba-header cf">
+						<a id="ba-menu-toggle" class="ba-menu-toggle" href="#">
+							<span></span>
+						</a>
+					<a class="ba-logo" href="#"><img src="img/logo.png" alt="logo"></a>
 					<nav class="ba-float-right">
 						<ul class="ba-menu">
-							<li><a href="#">Features</a></li>
-							<li><a href="#">Support</a></li>
+							<li><a href="#features">Features</a></li>
+							<li><a href="#support">Support</a></li>
 							<li><a href="#">Blog</a></li>
 
 						</ul>
 					</nav>
-				</div>
 			</header>
+			</div>
 			<div class="ba-container">
 				<div class="ba-grid">
 					<div class="ba-width-small-1-2">
@@ -50,7 +53,7 @@
 			</div>
 		</div>
 		<main role="main" >
-			<section class="ba-features">
+			<section id="features" class="ba-features">
 				<div class="ba-container">
 					<div class="ba-text">
 						<h2>Tinyone features</h2>
@@ -104,7 +107,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="ba-contact">
+			<section id="support" class="ba-contact">
 				<div class="ba-container ba-border">
 					<div class="ba-text">
 						<h2>Keep in touch with us</h2>
@@ -181,6 +184,7 @@
 				</div>
 			</div>
 		</footer>
-		<script src="js/main.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script type='text/javascript' src="js/main.js"></script>
 	</body>
 	</html>
