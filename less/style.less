@@ -118,9 +118,7 @@ select {
 }
 
 // ba-phone
-.ba-logo {
-		 display: block;
-		 }
+
 .ba-phone {
 	background-color:@primary-color;
 	padding: 65px 0 108px;
@@ -146,13 +144,81 @@ select {
 			}
 		}
 	}
-
- .ba-menu-toggle {
-			display: none;
+	&__col-text {
+		text-align: center;
+		@media @small {
+			text-align: left;
 		}
+	}
+	h2 {
+		margin-top: 20px;
+		margin-bottom: 15px;
+		@media @small {
+			margin-top: 65px;
+		}
+	}
+	&__descr {
+		font-size: 20px;
+		font-weight: 400;
+		margin-bottom: 20px;
+		margin-top: 0;
+	}
+
+	&__text {
+		padding-bottom: 25px;
+	}
+
+	&__icon {
+		text-decoration: none;
+		font-size: 39px;
+		color:inherit;
+		margin-right: 37px;
+		&:hover {
+			color:#fff;
+		}
+	}
+	&__icon:first-of-type {
+		margin-left:37px;
+		@media @small {
+			margin-left: 0;
+		}
+	}
+	&__img-wrap {
+		text-align: center;
+		@media @small {
+			text-align: left;
+		}
+	}
+	&__img {
+		position: relative;
+		display: inline-block;
+		margin-top:50px;
+		background-color: @secondary-color;
+		height: 343px;
+		width: 230px;
+		border-width: 44px 14px;
+		border-color: #fff;
+		border-style: solid;
+		border-radius: 20px;
+		&:before{
+			content: "";
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -74px;
+			margin-top: -36px;
+			height: 43px;
+			width: 149px;
+			background: url(../img/logo-phone.png);
+		}
+	}
+}
+.ba-menu-toggle {
+	display: none;
+}
 
 @media (max-width:767px) {
-
 	.ba-menu-toggle {
 		display: block;
 		float: right;
@@ -185,25 +251,26 @@ select {
 		}
 	}
 	.ba-logo {
+		display: block;
 		width: 100px;
+		padding-top: 20px;
 	}
 	.ba-menu {
 		position: fixed;
 		z-index: 10;
 		right: 0;
-		top: 0;
+		top:0;
 		bottom: 0;
 		width: 200px;
 		background: @secondary-color;
-		padding-top: 0;
 		transform: translateX(100%);
 		transition: transform .3s ease-in;
 		li {
 			text-align: left;
-
-			a {
-				color: @primary-color;
-			}
+			color: @primary-color;
+		}
+		li:first-child {
+			padding-top: 75px;
 		}
 	}
 	body {
@@ -224,69 +291,6 @@ select {
 					transform:rotate(-45deg);
 				}
 			}
-		}
-	}
-}
-
-
-	h2 {
-		margin-top: 65px;
-		margin-bottom: 15px;
-	}
-	&__descr {
-		font-size: 20px;
-		font-weight: 400;
-		margin-bottom: 20px;
-		margin-top: 0;
-	}
-
-	&__text {
-		padding-bottom: 25px;
-	}
-	&__icon {
-		text-decoration: none;
-		font-size: 39px;
-		color:inherit;
-		margin-right: 37px;
-		&:hover {
-			color:#fff;
-		}
-	}
-	&__img {
-		position: relative;
-
-		margin-top:50px;
-		background-color: @secondary-color;
-		height: 343px;
-		width: 230px;
-		border-width: 44px 14px;
-		border-color: #fff;
-		border-style: solid;
-		border-radius: 20px;
-		&:before{
-			content: "";
-			display: block;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			margin-left: -74px;
-			margin-top: -36px;
-			height: 43px;
-			width: 149px;
-			background: url(../img/logo-phone.png);
-		}
-
-		@media @small {
-			margin-left: -30px;
-			margin-top:0;
-		}
-		@media @medium {
-			margin-left: 30px;
-		}
-		@media @large{
-			margin-left: 100px;
-			height: 468px;
-			width: 314px;
 		}
 	}
 }
@@ -396,13 +400,13 @@ select {
 	padding: 60px 0 140px;
 	background-color: @secondary-color;
 	color: #FFF;
+	text-align: center;
 	& h4 {
 		margin: 0;
 	}
 	.ba-company {
 		& address {
 			font-style: normal;
-
 		}
 		& a {
 			color:inherit;
@@ -427,5 +431,8 @@ select {
 				color:@primary-color;
 			}
 		}
+	}
+	@media @small {
+		text-align: left;
 	}
 }

@@ -843,104 +843,22 @@ select:focus {
 .ba-phone .ba-menu li a:hover {
   color: #fff;
 }
-.ba-phone .ba-menu-toggle {
-  display: none;
+.ba-phone__col-text {
+  text-align: center;
 }
-@media (max-width: 767px) {
-  .ba-phone .ba-menu-toggle {
-    display: block;
-    float: right;
-    padding: 0 20px;
-  }
-  .ba-phone .ba-menu-toggle span {
-    width: 30px;
-    display: block;
-    height: 4px;
-    background: #010101;
-    position: relative;
-    margin: 30px 0;
-    transition: background 0.2s ease-in;
-  }
-  .ba-phone .ba-menu-toggle span:before,
-  .ba-phone .ba-menu-toggle span:after {
-    position: absolute;
-    content: "";
-    display: block;
-    width: 30px;
-    height: 4px;
-    background: #010101;
-    left: 0;
-    right: 0;
-    transition: -webkit-transform 0.2s ease-in;
-    transition: transform 0.2s ease-in;
-    transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
-  }
-  .ba-phone .ba-menu-toggle span:before {
-    top: -10px;
-  }
-  .ba-phone .ba-menu-toggle span:after {
-    bottom: -10px;
-  }
-  .ba-phone .ba-logo {
-    display: block;
-    width: 100px;
-  }
-  .ba-phone .ba-menu {
-    position: fixed;
-    z-index: 10;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 200px;
-    background: #010101;
-    padding-top: 60px;
-    -webkit-transform: translateX(100%);
-        -ms-transform: translateX(100%);
-            transform: translateX(100%);
-    transition: -webkit-transform 0.3s ease-in;
-    transition: transform 0.3s ease-in;
-    transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
-  }
-  .ba-phone .ba-menu li {
+@media (min-width:480px) {
+  .ba-phone__col-text {
     text-align: left;
-  }
-  .ba-phone .ba-menu li a {
-    color: #fcdb00;
-  }
-  .ba-phone body {
-    transition: -webkit-transform 0.3s ease-in;
-    transition: transform 0.3s ease-in;
-    transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
-  }
-  .ba-phone .ba-menu-opened {
-    -webkit-transform: translateX(-200px);
-        -ms-transform: translateX(-200px);
-            transform: translateX(-200px);
-    overflow: hidden;
-  }
-  .ba-phone .ba-menu-opened .ba-menu-toggle span {
-    background-color: transparent;
-  }
-  .ba-phone .ba-menu-opened .ba-menu-toggle span:before {
-    -webkit-transform-origin: 0 0;
-        -ms-transform-origin: 0 0;
-            transform-origin: 0 0;
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  .ba-phone .ba-menu-opened .ba-menu-toggle span:after {
-    -webkit-transform-origin: 0 100%;
-        -ms-transform-origin: 0 100%;
-            transform-origin: 0 100%;
-    -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
   }
 }
 .ba-phone h2 {
-  margin-top: 65px;
+  margin-top: 20px;
   margin-bottom: 15px;
+}
+@media (min-width:480px) {
+  .ba-phone h2 {
+    margin-top: 65px;
+  }
 }
 .ba-phone__descr {
   font-size: 20px;
@@ -960,8 +878,25 @@ select:focus {
 .ba-phone__icon:hover {
   color: #fff;
 }
+.ba-phone__icon:first-of-type {
+  margin-left: 37px;
+}
+@media (min-width:480px) {
+  .ba-phone__icon:first-of-type {
+    margin-left: 0;
+  }
+}
+.ba-phone__img-wrap {
+  text-align: center;
+}
+@media (min-width:480px) {
+  .ba-phone__img-wrap {
+    text-align: left;
+  }
+}
 .ba-phone__img {
   position: relative;
+  display: inline-block;
   margin-top: 50px;
   background-color: #010101;
   height: 343px;
@@ -983,22 +918,100 @@ select:focus {
   width: 149px;
   background: url(../img/logo-phone.png);
 }
-@media (min-width:480px) {
-  .ba-phone__img {
-    margin-left: -30px;
-    margin-top: 0;
-  }
+.ba-menu-toggle {
+  display: none;
 }
-@media (min-width:768px) {
-  .ba-phone__img {
-    margin-left: 30px;
+@media (max-width: 767px) {
+  .ba-menu-toggle {
+    display: block;
+    float: right;
+    padding: 0 20px;
   }
-}
-@media (min-width:960px) {
-  .ba-phone__img {
-    margin-left: 100px;
-    height: 468px;
-    width: 314px;
+  .ba-menu-toggle span {
+    width: 30px;
+    display: block;
+    height: 4px;
+    background: #010101;
+    position: relative;
+    margin: 30px 0;
+    transition: background 0.2s ease-in;
+  }
+  .ba-menu-toggle span:before,
+  .ba-menu-toggle span:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: #010101;
+    left: 0;
+    right: 0;
+    transition: -webkit-transform 0.2s ease-in;
+    transition: transform 0.2s ease-in;
+    transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+  }
+  .ba-menu-toggle span:before {
+    top: -10px;
+  }
+  .ba-menu-toggle span:after {
+    bottom: -10px;
+  }
+  .ba-logo {
+    display: block;
+    width: 100px;
+    padding-top: 20px;
+  }
+  .ba-menu {
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    background: #010101;
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
+    transition: -webkit-transform 0.3s ease-in;
+    transition: transform 0.3s ease-in;
+    transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  }
+  .ba-menu li {
+    text-align: left;
+    color: #fcdb00;
+  }
+  .ba-menu li:first-child {
+    padding-top: 75px;
+  }
+  body {
+    transition: -webkit-transform 0.3s ease-in;
+    transition: transform 0.3s ease-in;
+    transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  }
+  .ba-menu-opened {
+    -webkit-transform: translateX(-200px);
+        -ms-transform: translateX(-200px);
+            transform: translateX(-200px);
+    overflow: hidden;
+  }
+  .ba-menu-opened .ba-menu-toggle span {
+    background-color: transparent;
+  }
+  .ba-menu-opened .ba-menu-toggle span:before {
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .ba-menu-opened .ba-menu-toggle span:after {
+    -webkit-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
   }
 }
 /*ba-features*/
@@ -1105,6 +1118,7 @@ select:focus {
   padding: 60px 0 140px;
   background-color: #010101;
   color: #FFF;
+  text-align: center;
 }
 .ba-footer h4 {
   margin: 0;
@@ -1136,6 +1150,11 @@ select:focus {
 }
 .ba-footer__links a:hover {
   color: #fcdb00;
+}
+@media (min-width:480px) {
+  .ba-footer {
+    text-align: left;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
